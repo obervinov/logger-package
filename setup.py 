@@ -1,0 +1,13 @@
+from setuptools import setup
+
+setup(
+    name='logger-obervinov',
+    url='https://github.com/obervinov/logger-package',
+    author='Oleg Bervinov',
+    author_email='unknown-312@ya.ru',
+    packages=['logger'],
+    install_requires=['logging'],
+    version='1.0.0',
+    license='unlicense',
+    description='This is a custom log formatter package from python projects'
+)
