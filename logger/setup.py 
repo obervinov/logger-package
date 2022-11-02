@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='logger-obervinov',
+    name='logger',
     url='https://github.com/obervinov/logger-package',
     author='Oleg Bervinov',
     author_email='unknown-312@ya.ru',
