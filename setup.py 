@@ -9,7 +9,7 @@ setup(
     This name will be used when people try to do pip install. And it is CASE SENSITIVE. 
     You should create an unique name. Search on pypi.org to see if the name is taken or not.
     '''
-    name = 'Logger', 
+    name = 'logger', 
     
     '''
     The version number of your package consists of three integers "Major.Minor.Patch".
