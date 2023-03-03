@@ -4,19 +4,38 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "logger"
-version = "1.0.0"
-authors = [
-  { name="Bervinov Oleg", email="unknown-312@ya.ru" },
-]
-description = "This is a custom log formatter package from python projects."
+version = "1.0.1"
+description = "This is an additional implementation over the logging module. This module is designed for fast initialization and configuration of readable and structured logging."
+license = {text = "MIT"}
 readme = "README.md"
 requires-python = ">=3.9"
+authors = [
+  { name="Bervinov Oleg", email="obervinov@pm.me" },
+]
+maintainers = [
+    { name="Bervinov Oleg", email="obervinov@pm.me" },
+]
 classifiers = [
+    "Programming Language :: Python",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: Implementation :: CPython",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
 
 [project.urls]
 "Homepage" = "https://github.com/obervinov/logger-package"
+"Repository" = "https://github.com/obervinov/logger-package"
 "Bug Tracker" = "https://github.com/obervinov/logger-package/issues"
+"Documentation" = "https://github.com/obervinov/logger-package/blob/main/README.md"
+"Changelog" = "https://github.com/obervinov/logger-package/blob/main/CHANGELOG.md"
+
+[tool.poetry.dependencies]
+python = "^3.6.2"
+logging = "^0.4.9.6"
