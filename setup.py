@@ -35,7 +35,5 @@ setup(
         'Operating System :: OS Independent'
     ],
     keywords=['logger', 'logging'],
-    install_requires=[
-        'logging==0.4.9.6'
-    ]
+    install_requires=[]
 )

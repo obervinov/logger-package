@@ -4,7 +4,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 
 
-## v1.0.1 - 2023-03-10
+## v1.0.1 - 2023-03-03
 ### What's Changed
 **Full Changelog**: https://github.com/obervinov/logger-package/compare/v1.0.0...v1.0.1 by @obervinov in https://github.com/obervinov/logger-package/pull/1
 #### 🐛 Bug Fixes
@@ -14,7 +14,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 * updated and expanded the documentation in the file [README.md](https://github.com/obervinov/logger-package/blob/main/README.md)
 #### 💥 Breaking Changes
 * global **code recycling**: _removed old artifacts_ and _more comments added to the code_
-* added support for **loading the logger format** from a _yaml file_ 
+* added support for loading the **logger settings from a environment variable**
 #### 🚀 Features
 * added github actions: **flake8**, **pylint** and **create release**
 * added [SECURITY](https://github.com/obervinov/logger-package/blob/main/SECURITY.md)

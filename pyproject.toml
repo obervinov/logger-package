@@ -38,4 +38,3 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.6.2"
-logging = "^0.4.9.6"
