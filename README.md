@@ -36,12 +36,14 @@ pip3 install git+https://github.com/obervinov/logger-package.git@v1.0.0#egg=vaul
 ```
 
 ## <img src="https://github.com/obervinov/_templates/blob/main/icons/config.png" width="25" title="usage"> Usage example
+### Environment variables
 | Name  | Description | Default value |
 | ------------------------ | ------------------------------------------------ | ------------------------ |
 | `LOGGER_FORMAT` | A string with the event logging format | `[%(asctime)s] %(levelname)s [%(name)s.%(funcName)s:%(lineno)d] %(message)s` |
-| `LOGGER_LEVEL` | Event logging level: **DEBUG**, **INFO**, **WARNING**, **ERROR**, **CRITICAL** or **NOT SET** | `INFO` |
+| `LOGGER_LEVEL` | Event logging level: DEBUG, INFO, WARNING, ERROR, CRITICAL or NOT SET | `INFO` |
 | `LOGGER_DATE_FORMAT` | Date format in logging event output | `%d/%b/%Y %H:%M:%S` |
 
+### Examples
 ```python
 """Import module"""
 from logger import log
