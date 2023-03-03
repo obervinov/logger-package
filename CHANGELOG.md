@@ -14,8 +14,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 * updated and expanded the documentation in the file [README.md](https://github.com/obervinov/logger-package/blob/main/README.md)
 #### 💥 Breaking Changes
 * global **code recycling**: _removed old artifacts_ and _more comments added to the code_
-* added support for loading the **logger settings from a environment variable**
 #### 🚀 Features
+* added support for loading the **logger settings from a environment variable**
 * added github actions: **flake8**, **pylint** and **create release**
 * added [SECURITY](https://github.com/obervinov/logger-package/blob/main/SECURITY.md)
 * added [ISSUE_TEMPLATE](https://github.com/obervinov/logger-package/tree/main/.github/ISSUE_TEMPLATE)
