@@ -1,19 +1,35 @@
-######### THIS FILE WITH LOGGING FORMAT #########
-
-### MODULES AND VARS ###
+"""This is an additional implementation over the logging module.
+This module is designed for fast initialization
+and configuration of readable and structured logging.
+"""
+import os
 import logging
-### MODULES AND VARS ###
 
+logger_format = os.environ.get(
+    'LOGGER_FORMAT',
+    '[%(asctime)s] %(levelname)s [%(name)s.%(funcName)s:%(lineno)d] %(message)s'
+)
+logger_level = os.environ.get(
+    'LOGGER_LEVEL',
+    'INFO'
+)
+logger_date_format = os.environ.get(
+    'LOGGER_DATE_FORMAT',
+    '%d/%b/%Y %H:%M:%S'
+)
 
 class CustomFormatter(logging.Formatter):
-
+    """This class is an implementation on top of the logging module.
+    Contains methods for customizing the log output format
+    and the ability to configure the logger via a yaml file.
+    """
     grey = "\x1b[38;20m"
     green = "\x1b[32;20m"
     yellow = "\x1b[33;20m"
     red = "\x1b[31;20m"
     bold_red = "\x1b[31;1m"
     reset = "\x1b[0m"
-    fmt = "[%(asctime)s] %(levelname)s [%(name)s.%(funcName)s:%(lineno)d] %(message)s"
+    fmt = logger_format
 
     FORMATS = {
         logging.DEBUG: grey + fmt + reset,
@@ -26,20 +42,20 @@ class CustomFormatter(logging.Formatter):
     def format(self, record):
         log_fmt = self.FORMATS.get(record.levelno)
         formatter = logging.Formatter(log_fmt)
-        
+
         return formatter.format(record)
 
 
 logging.basicConfig(
-    level="INFO",
-    format="[%(asctime)s] %(levelname)s [%(name)s.%(funcName)s:%(lineno)d] %(message)s",
-    datefmt="%d/%b/%Y %H:%M:%S")
+    level=logger_level,
+    format=logger_format,
+    datefmt=logger_date_format)
 
 
 log = logging.getLogger()
 log.handlers = []
 ch = logging.StreamHandler()
-ch.setLevel("INFO")
+ch.setLevel(logger_level)
 
 ch.setFormatter(CustomFormatter())
 log.addHandler(ch)
