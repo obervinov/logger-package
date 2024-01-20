@@ -17,22 +17,31 @@ This module is designed for fast initialization and configuration of readable an
 ## <img src="https://github.com/obervinov/_templates/blob/main/icons/github-actions.png" width="25" title="github-actions"> GitHub Actions
 | Name  | Version |
 | ------------------------ | ----------- |
-| GitHub Actions Templates | [v1.0.1](https://github.com/obervinov/_templates/tree/v1.0.1) |
+| GitHub Actions Templates | [v1.0.12](https://github.com/obervinov/_templates/tree/v1.0.12) |
 
 
 ## <img src="https://github.com/obervinov/_templates/blob/main/icons/requirements.png" width="25" title="functions"> Supported functions
 - Color selection depending on the logging level
 - Structured and formatted message for more informative
-- Loading the logger configuration and format from a environment varibales
+- Loading the logger configuration and format from a environment variables
 
-## <img src="https://github.com/obervinov/_templates/blob/main/icons/stack2.png" width="20" title="install"> Installing
+## <img src="https://github.com/obervinov/_templates/blob/main/icons/stack2.png" width="20" title="install"> Installing with Poetry
 ```bash
-# Install current version
-pip3 install git+https://github.com/obervinov/logger-package.git#egg=vault
-# Install version by branch
-pip3 install git+https://github.com/obervinov/logger-package.git@main#egg=vault
-# Install version by tag
-pip3 install git+https://github.com/obervinov/logger-package.git@v1.0.0#egg=vault
+tee -a pyproject.toml <<EOF
+[tool.poetry]
+name = myproject"
+version = "1.0.0"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+logger = { git = "https://github.com/obervinov/logger-package.git", tag = "v1.0.2" }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+EOF
+
+poetry install
 ```
 
 ## <img src="https://github.com/obervinov/_templates/blob/main/icons/config.png" width="25" title="usage"> Usage example

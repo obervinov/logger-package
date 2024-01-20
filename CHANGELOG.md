@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 * 
 #### 📚 Documentation
 * [Fix badge with tests in README.md](https://github.com/obervinov/logger-package/issues/10)
+* [Fix typos in README.md](https://github.com/obervinov/logger-package/issues/3)
 #### 💥 Breaking Changes
 * [Migration from pip to poetry](https://github.com/obervinov/logger-package/issues/2)
 #### 🚀 Features
