@@ -1,7 +1,7 @@
 # Logger Package
-[![Release](https://github.com/obervinov/logger-package/actions/workflows/release.yml/badge.svg)](https://github.com/obervinov/logger-package/actions/workflows/release.yml)
+[![Release](https://github.com/obervinov/logger-package/actions/workflows/release.yaml/badge.svg)](https://github.com/obervinov/logger-package/actions/workflows/release.yaml)
 [![CodeQL](https://github.com/obervinov/logger-package/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/obervinov/logger-package/actions/workflows/github-code-scanning/codeql)
-[![Tests and checks](https://github.com/obervinov/logger-package/actions/workflows/tests.yml/badge.svg?branch=main&event=pull_request)](https://github.com/obervinov/logger-package/actions/workflows/tests.yml)
+[![PR](https://github.com/obervinov/logger-package/actions/workflows/pr.yaml/badge.svg?branch=main&event=pull_request)](https://github.com/obervinov/logger-package/actions/workflows/pr.yaml)
 
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/obervinov/logger-package?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/obervinov/logger-package?style=for-the-badge)

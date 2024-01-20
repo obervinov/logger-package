@@ -5,11 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## v1.0.2 - 2024-01-20
 ### What's Changed
-**Full Changelog**: https://github.com/obervinov/logger-package/compare/v1.0.1...v1.0.2 by @obervinov in https://github.com/obervinov/logger-package/pull/1
+**Full Changelog**: https://github.com/obervinov/logger-package/compare/v1.0.1...v1.0.2 by @obervinov in https://github.com/obervinov/logger-package/pull/11
 #### 🐛 Bug Fixes
 * 
 #### 📚 Documentation
-* 
+* [Fix badge with tests in README.md](https://github.com/obervinov/logger-package/issues/10)
 #### 💥 Breaking Changes
 * [Migration from pip to poetry](https://github.com/obervinov/logger-package/issues/2)
 #### 🚀 Features
