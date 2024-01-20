@@ -54,16 +54,16 @@ poetry install
 
 ### Examples
 ```python
-"""Import module"""
+# Import module
 from logger import log
 
-"""Examples"""
-"""error"""
+# Examples
+# error message
 log.error(f"[class.{__class__.__name__}] this error: {error}")
 
-"""warning"""
+# warning message
 log.warning(f"[class.{__class__.__name__}] this warning: {warn}")
 
-"""info"""
+# info message
 log.info(f"[class.{__class__.__name__}] this info: {info}")
 ```

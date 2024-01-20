@@ -7,10 +7,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ### What's Changed
 **Full Changelog**: https://github.com/obervinov/logger-package/compare/v1.0.1...v1.0.2 by @obervinov in https://github.com/obervinov/logger-package/pull/11
 #### 🐛 Bug Fixes
-* 
+* [Rename the directory with the src module to the package name](https://github.com/obervinov/logger-package/issues/7)
 #### 📚 Documentation
 * [Fix badge with tests in README.md](https://github.com/obervinov/logger-package/issues/10)
 * [Fix typos in README.md](https://github.com/obervinov/logger-package/issues/3)
+* [Update PR template](https://github.com/obervinov/logger-package/issues/8)
+* [Format function headers in comments](https://github.com/obervinov/logger-package/issues/6)
 #### 💥 Breaking Changes
 * [Migration from pip to poetry](https://github.com/obervinov/logger-package/issues/2)
 #### 🚀 Features

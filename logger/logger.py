@@ -1,10 +1,12 @@
-"""This is an additional implementation over the logging module.
-This module is designed for fast initialization
-and configuration of readable and structured logging.
+"""
+This is an additional implementation over the logging module.
+This module is designed for fast initialization and configuration of readable and structured logging.
 """
 import os
 import logging
 
+
+# Get environment variables values
 logger_format = os.environ.get(
     'LOGGER_FORMAT',
     '[%(asctime)s] %(levelname)s [%(name)s.%(funcName)s:%(lineno)d] %(message)s'
@@ -18,10 +20,11 @@ logger_date_format = os.environ.get(
     '%d/%b/%Y %H:%M:%S'
 )
 
+
 class CustomFormatter(logging.Formatter):
-    """This class is an implementation on top of the logging module.
-    Contains methods for customizing the log output format
-    and the ability to configure the logger via a yaml file.
+    """
+    This class is an implementation on top of the logging module.
+    Contains methods for customizing the log output format and the ability to configure the logger via a yaml file.
     """
     grey = "\x1b[38;20m"
     green = "\x1b[32;20m"
@@ -49,7 +52,8 @@ class CustomFormatter(logging.Formatter):
 logging.basicConfig(
     level=logger_level,
     format=logger_format,
-    datefmt=logger_date_format)
+    datefmt=logger_date_format
+)
 
 
 log = logging.getLogger()
