@@ -59,11 +59,11 @@ from logger import log
 
 # Examples
 # error message
-log.error(f"[class.{__class__.__name__}] this error: {error}")
+log.error(f"this error: {error}")
 
 # warning message
-log.warning(f"[class.{__class__.__name__}] this warning: {warn}")
+log.warning(f"this warning: {warn}")
 
 # info message
-log.info(f"[class.{__class__.__name__}] this info: {info}")
+log.info(f"this info: {info}")
 ```
