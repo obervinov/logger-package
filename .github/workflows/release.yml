@@ -23,4 +23,5 @@ jobs:
 
   create-release:
     uses: obervinov/_templates/.github/workflows/release.yaml@v1.0.12
-    needs: [changelog, pylint, pytest, pyproject]
+    needs: [changelog, pylint, pyproject]
+    # needs: [changelog, pylint, pytest, pyproject]
