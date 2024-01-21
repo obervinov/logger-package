@@ -21,6 +21,17 @@ logger_date_format = os.environ.get(
 )
 
 
+# pylint: disable=too-few-public-methods
+class ClassNameFilter(logging.Filter):
+    """
+    This сlass is used to add the class name and method name to the log output.
+    """
+    def filter(self, record):
+        record.class_name = record.name
+        record.method_name = record.funcName
+        return True
+
+
 class CustomFormatter(logging.Formatter):
     """
     This class is an implementation on top of the logging module.
@@ -55,11 +66,12 @@ logging.basicConfig(
     datefmt=logger_date_format
 )
 
-
 log = logging.getLogger()
 log.handlers = []
+
+log.addFilter(ClassNameFilter())
+
 ch = logging.StreamHandler()
 ch.setLevel(logger_level)
-
 ch.setFormatter(CustomFormatter())
 log.addHandler(ch)
