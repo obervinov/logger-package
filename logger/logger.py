@@ -56,9 +56,8 @@ class CustomFormatter(logging.Formatter):
     def format(self, record):
         log_fmt = self.FORMATS.get(record.levelno)
         formatter = logging.Formatter(log_fmt)
-        record.class_name = record.class_name if hasattr(record, 'class_name') else ''
-        record.method_name = record.method_name if hasattr(record, 'method_name') else ''
-        log_fmt = f"{record.class_name}.{record.method_name}: {log_fmt}"
+        formatter.class_name = record.class_name
+        formatter.method_name = record.method_name
 
         return formatter.format(record)
 
@@ -69,7 +68,7 @@ logging.basicConfig(
     datefmt=logger_date_format
 )
 
-log = logging.getLogger()
+log = logging.getLogger(__name__)
 log.handlers = []
 
 log.addFilter(ClassNameFilter())
