@@ -1,7 +1,7 @@
 # Logger Package
-[![Release](https://github.com/obervinov/logger-package/actions/workflows/release.yml/badge.svg)](https://github.com/obervinov/logger-package/actions/workflows/release.yml)
+[![Release](https://github.com/obervinov/logger-package/actions/workflows/release.yaml/badge.svg)](https://github.com/obervinov/logger-package/actions/workflows/release.yaml)
 [![CodeQL](https://github.com/obervinov/logger-package/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/obervinov/logger-package/actions/workflows/github-code-scanning/codeql)
-[![Tests and checks](https://github.com/obervinov/logger-package/actions/workflows/tests.yml/badge.svg?branch=main&event=pull_request)](https://github.com/obervinov/logger-package/actions/workflows/tests.yml)
+[![PR](https://github.com/obervinov/logger-package/actions/workflows/pr.yaml/badge.svg?branch=main&event=pull_request)](https://github.com/obervinov/logger-package/actions/workflows/pr.yaml)
 
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/obervinov/logger-package?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/obervinov/logger-package?style=for-the-badge)
@@ -17,22 +17,31 @@ This module is designed for fast initialization and configuration of readable an
 ## <img src="https://github.com/obervinov/_templates/blob/main/icons/github-actions.png" width="25" title="github-actions"> GitHub Actions
 | Name  | Version |
 | ------------------------ | ----------- |
-| GitHub Actions Templates | [v1.0.1](https://github.com/obervinov/_templates/tree/v1.0.1) |
+| GitHub Actions Templates | [v1.0.12](https://github.com/obervinov/_templates/tree/v1.0.12) |
 
 
 ## <img src="https://github.com/obervinov/_templates/blob/main/icons/requirements.png" width="25" title="functions"> Supported functions
 - Color selection depending on the logging level
 - Structured and formatted message for more informative
-- Loading the logger configuration and format from a environment varibales
+- Loading the logger configuration and format from a environment variables
 
-## <img src="https://github.com/obervinov/_templates/blob/main/icons/stack2.png" width="20" title="install"> Installing
+## <img src="https://github.com/obervinov/_templates/blob/main/icons/stack2.png" width="20" title="install"> Installing with Poetry
 ```bash
-# Install current version
-pip3 install git+https://github.com/obervinov/logger-package.git#egg=vault
-# Install version by branch
-pip3 install git+https://github.com/obervinov/logger-package.git@main#egg=vault
-# Install version by tag
-pip3 install git+https://github.com/obervinov/logger-package.git@v1.0.0#egg=vault
+tee -a pyproject.toml <<EOF
+[tool.poetry]
+name = myproject"
+version = "1.0.0"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+logger = { git = "https://github.com/obervinov/logger-package.git", tag = "v1.0.2" }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+EOF
+
+poetry install
 ```
 
 ## <img src="https://github.com/obervinov/_templates/blob/main/icons/config.png" width="25" title="usage"> Usage example
@@ -45,16 +54,16 @@ pip3 install git+https://github.com/obervinov/logger-package.git@v1.0.0#egg=vaul
 
 ### Examples
 ```python
-"""Import module"""
+# Import module
 from logger import log
 
-"""Examples"""
-"""error"""
-log.error(f"[class.{__class__.__name__}] this error: {error}")
+# Examples
+# error message
+log.error(f"this error: {error}")
 
-"""warning"""
-log.warning(f"[class.{__class__.__name__}] this warning: {warn}")
+# warning message
+log.warning(f"this warning: {warn}")
 
-"""info"""
-log.info(f"[class.{__class__.__name__}] this info: {info}")
+# info message
+log.info(f"this info: {info}")
 ```

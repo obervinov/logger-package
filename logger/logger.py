@@ -1,10 +1,12 @@
-"""This is an additional implementation over the logging module.
-This module is designed for fast initialization
-and configuration of readable and structured logging.
+"""
+This is an additional implementation over the logging module.
+This module is designed for fast initialization and configuration of readable and structured logging.
 """
 import os
 import logging
 
+
+# Get environment variables values
 logger_format = os.environ.get(
     'LOGGER_FORMAT',
     '[%(asctime)s] %(levelname)s [%(name)s.%(funcName)s:%(lineno)d] %(message)s'
@@ -18,10 +20,22 @@ logger_date_format = os.environ.get(
     '%d/%b/%Y %H:%M:%S'
 )
 
+
+# pylint: disable=too-few-public-methods
+class ClassNameFilter(logging.Filter):
+    """
+    This сlass is used to add the class name and method name to the log output.
+    """
+    def filter(self, record):
+        record.class_name = record.name
+        record.method_name = record.funcName
+        return True
+
+
 class CustomFormatter(logging.Formatter):
-    """This class is an implementation on top of the logging module.
-    Contains methods for customizing the log output format
-    and the ability to configure the logger via a yaml file.
+    """
+    This class is an implementation on top of the logging module.
+    Contains methods for customizing the log output format and the ability to configure the logger via a yaml file.
     """
     grey = "\x1b[38;20m"
     green = "\x1b[32;20m"
@@ -42,6 +56,8 @@ class CustomFormatter(logging.Formatter):
     def format(self, record):
         log_fmt = self.FORMATS.get(record.levelno)
         formatter = logging.Formatter(log_fmt)
+        formatter.class_name = record.class_name
+        formatter.method_name = record.method_name
 
         return formatter.format(record)
 
@@ -49,13 +65,15 @@ class CustomFormatter(logging.Formatter):
 logging.basicConfig(
     level=logger_level,
     format=logger_format,
-    datefmt=logger_date_format)
+    datefmt=logger_date_format
+)
 
-
-log = logging.getLogger()
+log = logging.getLogger(__name__)
 log.handlers = []
+
+log.addFilter(ClassNameFilter())
+
 ch = logging.StreamHandler()
 ch.setLevel(logger_level)
-
 ch.setFormatter(CustomFormatter())
 log.addHandler(ch)
