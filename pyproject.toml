@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "logger"
-version = "1.0.4"
+version = "1.0.5"
 description = "This is an additional implementation over the logging module. This module is designed for fast initialization and configuration of readable and structured logging."
 authors = ["Bervinov Oleg <obervinov@pm.me>"]
 maintainers = ["Bervinov Oleg <obervinov@pm.me>"]
@@ -17,7 +17,7 @@ include = ["CHANGELOG.md"]
 "Bug Tracker" = "https://github.com/obervinov/logger-package/issues"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9 || ^3.10 || ^3.11"
 
 [build-system]
 requires = ["poetry-core"]
