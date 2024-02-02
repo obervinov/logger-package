@@ -6,8 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ## v1.0.5 - 2024-02-02
 ### What's Changed
 **full changelog**: https://github.com/obervinov/logger-package/compare/v1.0.4...v1.0.5 by @ obervinov https://github.com/obervinov/logger-package/pull/14
-#### 💥 Breaking Changes
-* downgrade `python` version from `3.10` to `3.9`
+#### 🐛 Bug Fixes
+* fix supported python versions `"^3.9 || ^3.10 || ^3.11"`
 
 
 ## v1.0.4 - 2024-01-24
