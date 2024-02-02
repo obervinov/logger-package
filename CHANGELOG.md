@@ -7,7 +7,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ### What's Changed
 **full changelog**: https://github.com/obervinov/logger-package/compare/v1.0.4...v1.0.5 by @ obervinov https://github.com/obervinov/logger-package/pull/14
 #### 🐛 Bug Fixes
-* fix supported python versions `"^3.9 || ^3.10 || ^3.11"`
+* fix the supported versions of python `"^3.9 || ^3.10 || ^3.11"`
 
 
 ## v1.0.4 - 2024-01-24
