@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## v1.0.5 - 2024-02-02
+### What's Changed
+**full changelog**: https://github.com/obervinov/logger-package/compare/v1.0.4...v1.0.5 by @ obervinov https://github.com/obervinov/logger-package/pull/1
+#### 💥 Breaking Changes
+* downgrade `python` version from `3.10` to `3.9`
+
+
 ## v1.0.4 - 2024-01-24
 ### What's Changed
 **full changelog**: https://github.com/obervinov/logger-package/compare/v1.0.3...v1.0.4 by @ obervinov https://github.com/obervinov/logger-package/pull/13
