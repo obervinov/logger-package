@@ -69,8 +69,10 @@ log.info(f"this info: {info}")
 
 #### With using class
 ```python
+# Import module
 from logger import log
 
+# Add logger to class
 class myproject:
   def __init__(self):
     self.log = create_logger(__name__, self.__class__.__name__)
@@ -90,4 +92,4 @@ mp.warning()
 mp.error()
 mp.debug()
 ```
-<img src="doc/example.png" width="200" title="example">
+<img src="doc/example.png" width="1000" title="example">
