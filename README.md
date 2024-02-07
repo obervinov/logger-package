@@ -75,16 +75,17 @@ from logger import log
 
 class myproject:
   def __init__(self):
-    log.info("Init my class")
+    self.log = create_logger(__name__, self.__class__.__name__)
+    self.log.info("Init my class")
 
   def warning(self):
-    log.warning("Warning")
+    self.log.warning("Warning")
 
   def error(self):
-    log.error("Critical error")
+    self.log.error("Critical error")
 
   def debug(self):
-    log.debug("Debug")
+    self.log.debug("Debug")
 
 mp = myproject()
 mp.warning()

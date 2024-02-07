@@ -68,18 +68,18 @@ class CustomFormatter(logging.Formatter):
 
 
 def create_logger(logger_name):
+    """
+    This function is used to create a logger with a custom format.
+    """
+    # pylint: disable=redefined-outer-name
     log = logging.getLogger(logger_name)
-    log.setLevel(logger_level)  # Set the logger level here
-
+    log.setLevel(logger_level)
     log.handlers = []
-
     log.addFilter(ClassNameFilter())
-
-    ch = logging.StreamHandler()
-    ch.setFormatter(CustomFormatter(logger_name))
-    log.addHandler(ch)
-
+    stream_handler = logging.StreamHandler()
+    stream_handler.setFormatter(CustomFormatter(logger_name))
+    log.addHandler(stream_handler)
     return log
 
 
-log = create_logger(__name__)  # Create logger for current module
+log = create_logger(__name__)
