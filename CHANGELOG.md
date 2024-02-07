@@ -3,6 +3,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## v1.0.6 - 2024-02-07
+### What's Changed
+**full changelog**: https://github.com/obervinov/logger-package/compare/v1.0.5...v1.0.6 by @ obervinov https://github.com/obervinov/logger-package/pull/18
+#### 🐛 Bug Fixes
+* [Duplicate entries in messages](https://github.com/obervinov/logger-package/issues/16)
+#### 📚 Documentation
+* [Corrections to README.md](https://github.com/obervinov/logger-package/issues/15)
+ 
+
 ## v1.0.5 - 2024-02-02
 ### What's Changed
 **full changelog**: https://github.com/obervinov/logger-package/compare/v1.0.4...v1.0.5 by @ obervinov https://github.com/obervinov/logger-package/pull/14

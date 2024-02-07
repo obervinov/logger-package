@@ -17,7 +17,7 @@ This module is designed for fast initialization and configuration of readable an
 ## <img src="https://github.com/obervinov/_templates/blob/main/icons/github-actions.png" width="25" title="github-actions"> GitHub Actions
 | Name  | Version |
 | ------------------------ | ----------- |
-| GitHub Actions Templates | [v1.0.12](https://github.com/obervinov/_templates/tree/v1.0.12) |
+| GitHub Actions Templates | [v1.0.13](https://github.com/obervinov/_templates/tree/v1.0.13) |
 
 
 ## <img src="https://github.com/obervinov/_templates/blob/main/icons/requirements.png" width="25" title="functions"> Supported functions
@@ -34,7 +34,7 @@ version = "1.0.0"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-logger = { git = "https://github.com/obervinov/logger-package.git", tag = "v1.0.2" }
+logger = { git = "https://github.com/obervinov/logger-package.git", tag = "v1.0.6" }
 
 [build-system]
 requires = ["poetry-core"]
@@ -53,6 +53,7 @@ poetry install
 | `LOGGER_DATE_FORMAT` | Date format in logging event output | `%d/%b/%Y %H:%M:%S` |
 
 ### Examples
+#### Simple
 ```python
 # Import module
 from logger import log
@@ -60,10 +61,35 @@ from logger import log
 # Examples
 # error message
 log.error(f"this error: {error}")
-
 # warning message
 log.warning(f"this warning: {warn}")
-
 # info message
 log.info(f"this info: {info}")
 ```
+
+#### With using class
+```python
+# Import module
+from logger import log
+
+# Add logger to class
+class myproject:
+  def __init__(self):
+    self.log = create_logger(__name__, self.__class__.__name__)
+    self.log.info("Init my class")
+
+  def warning(self):
+    self.log.warning("Warning")
+
+  def error(self):
+    self.log.error("Critical error")
+
+  def debug(self):
+    self.log.debug("Debug")
+
+mp = myproject()
+mp.warning()
+mp.error()
+mp.debug()
+```
+<img src="doc/example.png" width="1000" title="example">
