@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## v1.0.6 - 2024-02-07
 ### What's Changed
-**full changelog**: https://github.com/obervinov/logger-package/compare/v1.0.5...v1.0.6 by @ obervinov https://github.com/obervinov/logger-package/pull/17
+**full changelog**: https://github.com/obervinov/logger-package/compare/v1.0.5...v1.0.6 by @ obervinov https://github.com/obervinov/logger-package/pull/18
 #### 🐛 Bug Fixes
 * [Duplicate entries in messages](https://github.com/obervinov/logger-package/issues/16)
 #### 📚 Documentation
