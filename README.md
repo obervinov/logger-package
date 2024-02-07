@@ -61,10 +61,8 @@ from logger import log
 # Examples
 # error message
 log.error(f"this error: {error}")
-
 # warning message
 log.warning(f"this warning: {warn}")
-
 # info message
 log.info(f"this info: {info}")
 ```
