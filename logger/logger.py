@@ -9,7 +9,7 @@ import logging
 # Get environment variables values
 logger_format = os.environ.get(
     'LOGGER_FORMAT',
-    '[%(asctime)s] %(levelname)s [%(name)s.%(funcName)s:%(lineno)d] %(message)s'
+    '[%(asctime)s] %(levelname)s [%(logger_name)s:%(funcName)s:%(lineno)d] %(message)s'
 )
 logger_level = os.environ.get(
     'LOGGER_LEVEL',
@@ -24,7 +24,7 @@ logger_date_format = os.environ.get(
 # pylint: disable=too-few-public-methods
 class ClassNameFilter(logging.Filter):
     """
-    This сlass is used to add the class name and method name to the log output.
+    This class is used to add the class name and method name to the log output.
     """
     def filter(self, record):
         record.class_name = record.name
@@ -53,7 +53,12 @@ class CustomFormatter(logging.Formatter):
         logging.CRITICAL: bold_red + fmt + reset
     }
 
+    def __init__(self, logger_name):
+        super().__init__(logger_format, logger_date_format)
+        self.logger_name = logger_name
+
     def format(self, record):
+        record.logger_name = self.logger_name
         log_fmt = self.FORMATS.get(record.levelno)
         formatter = logging.Formatter(log_fmt)
         formatter.class_name = record.class_name
@@ -62,18 +67,19 @@ class CustomFormatter(logging.Formatter):
         return formatter.format(record)
 
 
-logging.basicConfig(
-    level=logger_level,
-    format=logger_format,
-    datefmt=logger_date_format
-)
+def create_logger(logger_name):
+    log = logging.getLogger(logger_name)
+    log.setLevel(logger_level)  # Set the logger level here
 
-log = logging.getLogger(__name__)
-log.handlers = []
+    log.handlers = []
 
-log.addFilter(ClassNameFilter())
+    log.addFilter(ClassNameFilter())
 
-ch = logging.StreamHandler()
-ch.setLevel(logger_level)
-ch.setFormatter(CustomFormatter())
-log.addHandler(ch)
+    ch = logging.StreamHandler()
+    ch.setFormatter(CustomFormatter(logger_name))
+    log.addHandler(ch)
+
+    return log
+
+
+log = create_logger(__name__)  # Create logger for current module
