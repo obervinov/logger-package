@@ -10,7 +10,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 * [Duplicate entries in messages](https://github.com/obervinov/logger-package/issues/16)
 #### 📚 Documentation
 * [Corrections to README.md](https://github.com/obervinov/logger-package/issues/15)
-
+ 
 
 ## v1.0.5 - 2024-02-02
 ### What's Changed
