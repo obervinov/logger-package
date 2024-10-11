@@ -14,11 +14,6 @@ This is an additional implementation over the **logging** module.
 
 This module is designed for fast initialization and configuration of readable and structured logging.
 
-## <img src="https://github.com/obervinov/_templates/blob/main/icons/github-actions.png" width="25" title="github-actions"> GitHub Actions
-| Name  | Version |
-| ------------------------ | ----------- |
-| GitHub Actions Templates | [v1.0.13](https://github.com/obervinov/_templates/tree/v1.0.13) |
-
 
 ## <img src="https://github.com/obervinov/_templates/blob/main/icons/requirements.png" width="25" title="functions"> Supported functions
 - Color selection depending on the logging level
@@ -33,8 +28,8 @@ name = myproject"
 version = "1.0.0"
 
 [tool.poetry.dependencies]
-python = "^3.10"
-logger = { git = "https://github.com/obervinov/logger-package.git", tag = "v1.0.6" }
+python = "^3.12"
+logger = { git = "https://github.com/obervinov/logger-package.git", tag = "v2.0.0" }
 
 [build-system]
 requires = ["poetry-core"]
@@ -93,3 +88,9 @@ mp.error()
 mp.debug()
 ```
 <img src="doc/example.png" width="1000" title="example">
+
+
+## <img src="https://github.com/obervinov/_templates/blob/main/icons/github-actions.png" width="25" title="github-actions"> GitHub Actions
+| Name  | Version |
+| ------------------------ | ----------- |
+| GitHub Actions Templates | [v2.0.0](https://github.com/obervinov/_templates/tree/v2.0.0) |
