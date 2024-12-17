@@ -3,6 +3,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## v2.0.1 - 2024-12-17
+### What's Changed
+**full changelog**: https://github.com/obervinov/logger-package/compare/v2.0.0...v2.0.1 by @ obervinov https://github.com/obervinov/logger-package/pull/22
+#### 🚀 Features
+* bump dependencies
+* bump workflow to `v2.0.2`
+
+
 ## v2.0.0 - 2024-10-11
 ### What's Changed
 **full changelog**: https://github.com/obervinov/logger-package/compare/v1.0.6...v2.0.0 by @ obervinov https://github.com/obervinov/logger-package/pull/19
