@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "logger"
-version = "2.0.0"
+version = "2.0.1"
 description = "This is an additional implementation over the logging module. This module is designed for fast initialization and configuration of readable and structured logging."
 authors = ["Bervinov Oleg <bervinov.ob@gmail.com>"]
 maintainers = ["Bervinov Oleg <bervinov.ob@gmail.com>"]
@@ -20,9 +20,9 @@ include = ["CHANGELOG.md"]
 python = "^3.12"
 
 [tool.poetry.group.dev.dependencies]
-pylint = "^3.3.1"
-flake8 = "^7.1.1"
-pytest = "^8.3.3"
+pylint = "^3"
+flake8 = "^7"
+pytest = "^8"
 
 [build-system]
 requires = ["poetry-core"]
