@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## v2.0.2 - 2025-07-10
 ### What's Changed
-**full changelog**: https://github.com/obervinov/logger-package/compare/v2.0.1...v2.0.2 by @ obervinov https://github.com/obervinov/logger-package/pull/28
+**full changelog**: https://github.com/obervinov/logger-package/compare/v2.0.1...v2.0.2 by @obervinov https://github.com/obervinov/logger-package/pull/28
 #### 🚀 Features
 * bump dependencies to latest versions
 * bump workflows to `v2.1.1`
@@ -13,7 +13,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## v2.0.1 - 2024-12-17
 ### What's Changed
-**full changelog**: https://github.com/obervinov/logger-package/compare/v2.0.0...v2.0.1 by @ obervinov https://github.com/obervinov/logger-package/pull/22
+**full changelog**: https://github.com/obervinov/logger-package/compare/v2.0.0...v2.0.1 by @obervinov https://github.com/obervinov/logger-package/pull/22
 #### 🚀 Features
 * bump dependencies
 * bump workflow to `v2.0.2`
@@ -21,7 +21,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## v2.0.0 - 2024-10-11
 ### What's Changed
-**full changelog**: https://github.com/obervinov/logger-package/compare/v1.0.6...v2.0.0 by @ obervinov https://github.com/obervinov/logger-package/pull/19
+**full changelog**: https://github.com/obervinov/logger-package/compare/v1.0.6...v2.0.0 by @obervinov https://github.com/obervinov/logger-package/pull/19
 #### 🚀 Features
 * bump python version to `3.12`
 * bump workflow to `v2.0.0`
@@ -29,7 +29,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## v1.0.6 - 2024-02-07
 ### What's Changed
-**full changelog**: https://github.com/obervinov/logger-package/compare/v1.0.5...v1.0.6 by @ obervinov https://github.com/obervinov/logger-package/pull/18
+**full changelog**: https://github.com/obervinov/logger-package/compare/v1.0.5...v1.0.6 by @obervinov https://github.com/obervinov/logger-package/pull/18
 #### 🐛 Bug Fixes
 * [Duplicate entries in messages](https://github.com/obervinov/logger-package/issues/16)
 #### 📚 Documentation
@@ -38,14 +38,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## v1.0.5 - 2024-02-02
 ### What's Changed
-**full changelog**: https://github.com/obervinov/logger-package/compare/v1.0.4...v1.0.5 by @ obervinov https://github.com/obervinov/logger-package/pull/14
+**full changelog**: https://github.com/obervinov/logger-package/compare/v1.0.4...v1.0.5 by @obervinov https://github.com/obervinov/logger-package/pull/14
 #### 🐛 Bug Fixes
 * fix the supported versions of python `"^3.9 || ^3.10 || ^3.11"`
 
 
 ## v1.0.4 - 2024-01-24
 ### What's Changed
-**full changelog**: https://github.com/obervinov/logger-package/compare/v1.0.3...v1.0.4 by @ obervinov https://github.com/obervinov/logger-package/pull/13
+**full changelog**: https://github.com/obervinov/logger-package/compare/v1.0.3...v1.0.4 by @obervinov https://github.com/obervinov/logger-package/pull/13
 #### 🐛 Bug Fixes
 * removed `logging = "^0.4.9.6"` for fix `ImportError: cannot import name 'log' from 'logger'`
 * added imports in `__init__.py` for fix `ImportError: cannot import name 'log' from 'logger'`
