@@ -1,7 +1,9 @@
 ---
 name: Release
 
-permissions: {}
+permissions:
+  contents: write
+  pull-requests: read
 
 on:
   pull_request:
