@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 **full changelog**: https://github.com/obervinov/logger-package/compare/v2.0.3...v2.0.4
 #### 🚀 Features
 * bump pytest from 8.4.1 to 9.0.2
+* bump pylint from ^3 to ^4
 
 
 ## v2.0.3 - 2025-12-23
