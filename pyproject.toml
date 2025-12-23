@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "logger"
-version = "2.0.3"
+version = "2.0.4"
 description = "This is an additional implementation over the logging module. This module is designed for fast initialization and configuration of readable and structured logging."
 authors = ["Bervinov Oleg <bervinov.ob@gmail.com>"]
 maintainers = ["Bervinov Oleg <bervinov.ob@gmail.com>"]
