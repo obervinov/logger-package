@@ -3,6 +3,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## v2.0.4 - 2025-12-23
+### What's Changed
+**full changelog**: https://github.com/obervinov/logger-package/compare/v2.0.3...v2.0.4
+#### 🚀 Features
+* bump pytest from 8.4.1 to 9.0.2
+* bump pylint from ^3 to ^4
+
+
 ## v2.0.3 - 2025-12-23
 ### What's Changed
 **full changelog**: https://github.com/obervinov/logger-package/compare/v2.0.2...v2.0.3 by @obervinov https://github.com/obervinov/logger-package/pull/39
