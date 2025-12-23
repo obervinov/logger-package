@@ -1,6 +1,9 @@
 ---
 name: Tests and checks
 
+permissions:
+  pull-requests: write
+
 on:
   push:
     branches:
