@@ -24,12 +24,12 @@ This module is designed for fast initialization and configuration of readable an
 ```bash
 tee -a pyproject.toml <<EOF
 [tool.poetry]
-name = myproject"
+name = "myproject"
 version = "1.0.0"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-logger = { git = "https://github.com/obervinov/logger-package.git", tag = "v2.0.4" }
+logger = { git = "https://github.com/obervinov/logger-package.git", tag = "v2.0.6" }
 
 [build-system]
 requires = ["poetry-core"]
@@ -43,7 +43,7 @@ poetry install
 ### Environment variables
 | Name  | Description | Default value |
 | ------------------------ | ------------------------------------------------ | --------------------------------------------------------------------- |
-| `LOGGER_FORMAT` | A string with the event logging format | `[%(asctime)s] %(levelname)s [%(name)s.%(funcName)s:%(lineno)d] %(message)s` |
+| `LOGGER_FORMAT` | A string with the event logging format | `[%(asctime)s] %(levelname)s [%(logger_name)s:%(funcName)s:%(lineno)d] %(message)s` |
 | `LOGGER_LEVEL` | Event logging level: DEBUG, INFO, WARNING, ERROR, CRITICAL or NOT SET | `INFO` |
 | `LOGGER_DATE_FORMAT` | Date format in logging event output | `%d/%b/%Y %H:%M:%S` |
 
@@ -70,7 +70,7 @@ from logger import log
 # Add logger to class
 class myproject:
   def __init__(self):
-    self.log = create_logger(__name__, self.__class__.__name__)
+    self.log = log
     self.log.info("Init my class")
 
   def warning(self):
@@ -91,6 +91,4 @@ mp.debug()
 
 
 ## <img src="https://github.com/obervinov/_templates/blob/main/icons/github-actions.png" width="25" title="github-actions"> GitHub Actions
-| Name  | Version |
-| ------------------------ | ----------- |
-| GitHub Actions Templates | [v2.1.1](https://github.com/obervinov/_templates/tree/v2.1.1) |
+[![GitHub Actions Templates](https://img.shields.io/badge/dynamic/regex?url=https%3A%2F%2Fraw.githubusercontent.com%2Fobervinov%2Flogger-package%2FHEAD%2F.github%2Fworkflows%2Fpr.yaml&search=pr.yaml%40%28v%5B0-9.%5D%2B%29&replace=%241&label=_templates&color=blue&logo=githubactions&logoColor=white)](https://github.com/obervinov/_templates)

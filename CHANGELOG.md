@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## v2.0.6 - 2026-09-18
+### What's Changed
+#### 📚 Documentation
+* `README.md`: correct the documented `LOGGER_FORMAT` default (`%(logger_name)s`, not `%(name)s.`), fix the class example — it called `create_logger()`, which is not exported from the package and takes one argument, not two — and point the install snippet at this release. Also fixes the unbalanced quote that made the pasted `pyproject.toml` invalid.
+* `README.md`: replace the hand-maintained GitHub Actions Templates table with a badge that reads the pinned version out of `.github/workflows/pr.yaml` — the table went stale on every template bump because nothing kept it in sync.
+
+
 ## v2.0.5 - 2026-09-17
 ### What's Changed
 #### 🐛 Bug Fixes
