@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 * `README.md`: pin the install snippet to the major tag (`tag = "v2"`) instead of the exact release. The release workflow now moves `v2` to each new `v2.x.x`, so the line no longer has to be edited on every release — which is how it kept going stale. An exact pin still works against the per-release tag.
 #### 🐛 Bug Fixes
 * `.github/workflows`: move to `obervinov/_templates@v4.1.0`, whose release template points the major tag at each new release.
+* `pyproject.toml`: dev dependencies to their current majors — `pylint` ^3 → ^4, `pytest` ^8 → ^9 — and `poetry.lock` refreshed (`pylint` 4.1.2, `pytest` 9.1.1, `flake8` 7.4.1, `pygments` 2.21.0). Supersedes the open dependabot PRs.
 
 
 ## v2.0.6 - 2026-09-18
